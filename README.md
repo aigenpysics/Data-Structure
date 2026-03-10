@@ -1,6 +1,6 @@
-# Data Structure & Algorithm Study (C++)
+# Data Structure 
 
-This repository contains my implementations and notes while studying **Data Structures and Algorithms using C++**.
+This repository contains my implementations and notes while studying **Data Structures using C++**.
 
 The goal of this project is to deeply understand how fundamental data structures work by **implementing them from scratch**, rather than simply using standard library implementations.
 
