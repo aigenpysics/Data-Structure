@@ -50,7 +50,7 @@ int main()
 	cout << endl;
 
 	// Fibonnacci
-	cout << "Fibonnacci: ";
+	cout << "Fibonnacci: "; 
 	for (int i = 0; i < 15; i++)
 		cout << setw(3) << Fibonacci(i) << " ";
 	cout << endl;

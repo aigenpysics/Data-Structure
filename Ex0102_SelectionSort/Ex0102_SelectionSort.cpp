@@ -167,28 +167,40 @@ int main()
 
 	// 비교 횟수 세보기, 더 효율적인 방법은 없을까?
 	// https://en.wikipedia.org/wiki/Sorting_algorithm
-	{
-		ofstream ofile("log.txt");
-		for (int size = 1; size < 1000; size++)
-		{
-			int count = 0;
-			int* arr = new int[size];
-			for (int s = 0; s < size; s++) {
-				arr[s] = size - s;
-			}
+	// {
+	// 	ofstream ofile("log.txt");
+	// 	for (int size = 1; size < 1000; size++)
+	// 	{
+	// 		int count = 0;
+	// 		int* arr = new int[size];
+	// 		for (int s = 0; s < size; s++) {
+	// 			arr[s] = size - s;
+	// 		}
 
-			//TODO: count ++;
+	// 		//TODO: count ++;
+	// 		int min_index;
+	// 		for (int i = 0; i < size -1; i++){
+	// 			min_index = i;
+	// 			for (int j = i+1; j < size; j++){
+	// 				count ++;
 
-			//cout << size << ", " << count << endl;
-			ofile << size << ", " << count << endl;
-			// Print(arr, size);
+	// 				if(arr[j] < arr[min_index]){
+	// 					min_index = j;
+	// 				}
+	// 				swap(arr[i], arr[min_index]);
+	// 			}
+	// 		}
+			
+	// 		//cout << size << ", " << count << endl;
+	// 		ofile << size << ", " << count << endl;
+	// 		// Print(arr, size);
 
-			delete[] arr;
-		}
+	// 		delete[] arr;
+	// 	}
 
-		ofile.close();
-	}
-	return 0;
+	// 	ofile.close();
+	// }
+	// return 0;
 
 	// [2, 2, 1]
 	// [1, 2, 2] // 첫 2가 마지막으로 이동
@@ -200,8 +212,17 @@ int main()
 
 		Print(arr, size); // arr이 Element의 배열
 
-		// TODO:
-
+		int min_index ;
+		for (int i = 0; i< size -1; i++){
+			min_index = i;
+			for (int j = i + 1; j < size; j++){
+				if (arr[j].key < arr[min_index].key){
+					min_index = j;
+				}
+			}
+			swap(arr[i], arr[min_index]);
+		}
 		Print(arr, size); // arr이 Element의 배열
 	}
+	return 0;
 }
