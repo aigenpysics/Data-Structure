@@ -43,6 +43,7 @@ int main()
 					best_case = false;
 				}
 				Print(arr,n);
+
 			if (best_case) break;
 			}
 			
@@ -51,6 +52,6 @@ int main()
 	}
 	return 0;
 
-	// Best case
-	// Stability
+	// Best case인 경우 bubble sorting이 의미 있다.
+	// Stability -> stableg
 }
