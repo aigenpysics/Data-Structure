@@ -1,0 +1,23 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build active C++ file (MSVC)",
+      "type": "process",
+      "command": "${workspaceFolder}\\.vscode\\build_msvc.bat",
+      "args": [
+        "${file}"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "options": {
+        "cwd": "${fileDirname}"
+      },
+      "problemMatcher": [
+        "$msCompile"
+      ]
+    }
+  ]
+}

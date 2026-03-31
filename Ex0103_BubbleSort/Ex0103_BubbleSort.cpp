@@ -22,18 +22,15 @@ void Print(int* arr, int size)
 
 int main()
 {
-	//int arr[] = { 5, 1, 4, 2, 8 }; // 위키피디아 예시
-	//int arr[] = { 5, 4, 3, 2, 1 }; // Worst Case
-	int arr[] = { 1, 2, 3, 4, 5 }; // Best Case
+	int arr[] = { 5, 1, 4, 2, 8 }; // 위키피디아 예시
+	// int arr[] = { 5, 4, 3, 2, 1 }; // Worst Case
+	// int arr[] = { 1, 2, 3, 5, 4 }; // Best Case
 	int n = sizeof(arr) / sizeof(arr[0]);
 
 	Print(arr, n);
 	cout << endl;
 
 	// Bubble Sort
-	// Best Case 조기 종료
-	bool best_case =true;
-
 	{
 		for(int i=0; i < n-1; i++){
 			//for(int j = 0; j<n -i-1; j++ ){
@@ -50,7 +47,6 @@ int main()
 			cout << endl;
 		}
 	}
-	return 0;
 
 	// Best case인 경우 bubble sorting이 의미 있다.
 	// Stability -> stableg
